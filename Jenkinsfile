@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''curl -o- -L https://yarnpkg.com/install.sh | bash
+        sh '''apt install curl -y
+curl -o- -L https://yarnpkg.com/install.sh | bash
 yarn install'''
       }
     }
