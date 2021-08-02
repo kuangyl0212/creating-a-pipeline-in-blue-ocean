@@ -9,9 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''npm config set registry https://registry.npm.taobao.org
-npm config get registry
-npm install'''
+        sh '''curl -o- -L https://yarnpkg.com/install.sh | bash
+yarn install'''
       }
     }
 
